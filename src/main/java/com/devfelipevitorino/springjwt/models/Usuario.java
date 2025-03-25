@@ -27,7 +27,7 @@ public class Usuario {
 	@NotBlank
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer Id;
+	private Long Id;
 	
 	@NotBlank
 	@Size(max = 20)
@@ -59,11 +59,11 @@ public class Usuario {
 	}
 
 	
-	public Integer getId() {
+	public Long getId() {
 		return Id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		Id = id;
 	}
 

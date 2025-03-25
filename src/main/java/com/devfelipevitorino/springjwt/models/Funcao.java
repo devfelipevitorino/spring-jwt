@@ -17,7 +17,7 @@ public class Funcao {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(length = 20)
@@ -30,11 +30,11 @@ public class Funcao {
 	}
 
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
