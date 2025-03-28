@@ -8,10 +8,6 @@ import com.devfelipevitorino.springjwt.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	
-	Optional<Usuario> findByUsername();
-	
-	Boolean ExistePorUsername(String username);
-	
-	Boolean ExistePorEmail(String email);
+	Optional<Usuario> findByEmail(String email);
 
 }
