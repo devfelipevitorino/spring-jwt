@@ -1,7 +1,6 @@
 package com.devfelipevitorino.springjwt.models;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -46,7 +45,7 @@ public class Usuario {
 	  @JoinTable(  name = "usuario_funcao", 
 	        joinColumns = @JoinColumn(name = "usuario_id"), 
 	        inverseJoinColumns = @JoinColumn(name = "funcao_id"))
-	  private Set<Funcao> funcoes = new HashSet<>();
+	  private List<Funcao> funcao;
 
 	public Usuario() {}
 	
@@ -91,12 +90,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Set<Funcao> getFuncoes() {
-		return funcoes;
+	public List<Funcao> getFuncao() {
+		return funcao;
 	}
 
-	public void setFuncoes(Set<Funcao> funcoes) {
-		this.funcoes = funcoes;
+	public void setFuncao(List<Funcao> funcao) {
+		this.funcao = funcao;
 	}
+
 
 }
